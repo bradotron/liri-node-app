@@ -17,8 +17,8 @@ var arg1 = process.argv[2];
 var arg2 = process.argv[3];
 
 // hardcoded args for testing
-arg1 = "movie-this";
-arg2 = "the biggest terminator";
+//arg1 = "movie-this";
+//arg2 = "Terminator";
 
 // this app can take in four commands:
 // 1. `concert-this`
@@ -77,7 +77,7 @@ var spotifyThis = function(song) {
 //      * Actors in the movie.
 //    * if no movie provided, search for "Mr. Nobody"
 let movieThis = function(movie) {
-  console.log(`movieThis(${movie})`);
+  // console.log(`movieThis(${movie})`);
   if (movie) {
     // song is not undefined, just search for it
     //console.log("true");
@@ -86,17 +86,38 @@ let movieThis = function(movie) {
     movie = "Mr. Nobody";
   }
 
-  let url = `http://www.omdbapi.com/?apikey=${keys.omdb.apiKey}&t=${movie.replace(/ /g, `+`)}`;
-
+  let url = `http://www.omdbapi.com/?apikey=${keys.omdb.apiKey}&s=${movie.replace(/ /g, `+`)}`;
   axios.get(url)
   .then(function (response) {
-    console.log(response);
+    // console.log(response);
+    if(!response.data) {
+      console.log("Movie not found, try searching again...");
+    } else {
+      // good response, log out the stuff
+      let myMovie = response.data.Search[0];
+      axios.get(`http://www.omdbapi.com/?apikey=${keys.omdb.apiKey}&t=${myMovie.Title.replace(/ /g, `+`)}`)
+      .then(function(response) {
+        //console.log(response.data);
+        let myMovie = response.data;
+        console.log(`Title: ${myMovie.Title}`);
+        console.log(`Year: ${myMovie.Year}`);
+        for(let i=0; i<myMovie.Ratings.length; i++) {
+          console.log(`${myMovie.Ratings[i].Source} rated this: ${myMovie.Ratings[i].Value}`);
+        }
+        console.log(`Produced in: ${myMovie.Country}`);
+        console.log(`Language: ${myMovie.Language}`);
+        console.log(`Plot: ${myMovie.Plot}`);
+        console.log(`Actors: ${myMovie.Actors}`);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
   })
   .catch(function (error) {
     console.log(error);
   });
 }
-
 
 // 4. `do-what-it-says`
 //    This will use the 'fs' node package to read in from random.txt and execute that command
