@@ -10,18 +10,18 @@ The user interfaces with the app via the command line. The user passes a command
 4. "do-what-it-says"
 
   * example command and output
-  >$ node liri movie-this "The Terminator"
-  >  packages loaded
-  >  Results powered by OMDB Web API
-  >  Title: The Terminator
-  >  Year: 1984
-  >  Internet Movie Database rated this: 8.0/10
-  >  Rotten Tomatoes rated this: 100%
-  >  Metacritic rated this: 84/100
-  >  Produced in: UK, USA
-  >  Language: English, Spanish
-  >  Plot: A seemingly indestructible android is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.
-  >  Actors: Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield
+  `$ node liri movie-this "The Terminator"`
+  `  packages loaded`
+  `  Results powered by OMDB Web API`
+  `  Title: The Terminator`
+  `  Year: 1984`
+  `  Internet Movie Database rated this: 8.0/10`
+  `  Rotten Tomatoes rated this: 100%`
+  `  Metacritic rated this: 84/100`
+  `  Produced in: UK, USA`
+  `  Language: English, Spanish`
+  `  Plot: A seemingly indestructible android is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.`
+  `  Actors: Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield`
 
 ### Link to YouTube example video:
   * https://youtu.be/rO-u9_1aidY
