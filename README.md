@@ -37,12 +37,14 @@ The user interfaces with the app via the command line. The user passes a command
   * If no band name is passed, this function will default to "Taylor Swift"
 
   * Example: 
+  ```
   $ node liri concert-this "Red Hot Chili Peppers"
   searching for concerts by: Red+Hot+Chili+Peppers
   Event 1
   Venue: Brisbane Entertainment Centre
   Location: Boondall, Australia
   Date: 02/25/2019
+  ```
 
   * Note: For band names that are multiple words, you must put double quotes around the band name. Refer to the example for proper syntax.
 
@@ -52,12 +54,14 @@ The user interfaces with the app via the command line. The user passes a command
   * If no song name is passed, this function will default to "The Sign"
 
   * Example: 
+  ```
   $ node liri spotify-this-song "Shake It Off"
   Results powered by Spotify API
   Artist: Taylor Swift
   Song Title: Shake It Off
   Preview Link: https://open.spotify.com/track/5xTtaWoae3wi06K5WfVUUH
   Album: 1989
+  ```
 
   * Note: For song names that are multiple words, you must put double quotes around the song name. Refer to the example for proper syntax.
 
@@ -67,6 +71,7 @@ The user interfaces with the app via the command line. The user passes a command
   * If no movie name is passed, this function will default to "Mr. Nobody"
 
   * Example: 
+  ```
   $ node liri movie-this "this is the end"
   Results powered by OMDB Web API
   Title: This Is the End
@@ -78,7 +83,8 @@ The user interfaces with the app via the command line. The user passes a command
   Language: English, Spanish
   Plot: 6 Los Angeles celebrities are stuck in James Franco's house after a series of devastating events just destroyed the city. Inside, the group not only will have to face with the apocalypse, but with themselves.
   Actors: James Franco, Jonah Hill, Seth Rogen, Jay Baruchel
-
+  ```
+  
   * Note: For movie names that are multiple words, you must put double quotes around the movie name. Refer to the example for proper syntax.
 
 4. "do-what-it-says"
