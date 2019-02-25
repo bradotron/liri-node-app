@@ -23,6 +23,9 @@ The user interfaces with the app via the command line. The user passes a command
     Plot: A seemingly indestructible android is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.
     Actors: Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield
 
+### Link to YouTube example video:
+  * https://youtu.be/rO-u9_1aidY
+
 ## Commands in Detail
 
 1. "concert-this"
